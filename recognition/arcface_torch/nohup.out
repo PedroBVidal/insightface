@@ -1,0 +1,104 @@
+/home/pbqv20/anaconda3/envs/arcface/lib/python3.9/site-packages/torch/utils/_contextlib.py:125: UserWarning: Decorating classes is deprecated and will be disabled in future versions. You should only decorate functions or methods. To preserve the current behavior of class decoration, you can directly decorate the `__init__` method and nothing else.
+  warnings.warn("Decorating classes is deprecated and will be disabled in "
+/home/pbqv20/insightface/recognition/arcface_torch/utils/utils_callbacks.py:22: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  if self.rank is 0:
+/home/pbqv20/insightface/recognition/arcface_torch/utils/utils_callbacks.py:62: SyntaxWarning: "is" with a literal. Did you mean "=="?
+  if self.rank is 0 and num_update > 0:
+Training: 2024-03-14 16:04:35,307-rank_id: 0
+Traceback (most recent call last):
+  File "/home/pbqv20/insightface/recognition/arcface_torch/train_v2.py", line 257, in <module>
+    main(parser.parse_args())
+  File "/home/pbqv20/insightface/recognition/arcface_torch/train_v2.py", line 98, in main
+    backbone = torch.nn.parallel.DistributedDataParallel(
+  File "/home/pbqv20/anaconda3/envs/arcface/lib/python3.9/site-packages/torch/nn/parallel/distributed.py", line 797, in __init__
+    _sync_module_states(
+  File "/home/pbqv20/anaconda3/envs/arcface/lib/python3.9/site-packages/torch/distributed/utils.py", line 292, in _sync_module_states
+    _sync_params_and_buffers(process_group, module_states, broadcast_bucket_size, src)
+  File "/home/pbqv20/anaconda3/envs/arcface/lib/python3.9/site-packages/torch/distributed/utils.py", line 306, in _sync_params_and_buffers
+    dist._broadcast_coalesced(
+torch.cuda.OutOfMemoryError: CUDA out of memory. Tried to allocate 168.00 MiB. GPU 0 has a total capacty of 7.80 GiB of which 45.44 MiB is free. Process 129079 has 6.84 GiB memory in use. Including non-PyTorch memory, this process has 928.00 MiB memory in use. Of the allocated memory 168.36 MiB is allocated by PyTorch, and 29.64 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting max_split_size_mb to avoid fragmentation.  See documentation for Memory Management and PYTORCH_CUDA_ALLOC_CONF
+/home/pbqv20/anaconda3/envs/arcface/lib/python3.9/site-packages/torch/utils/_contextlib.py:125: UserWarning: Decorating classes is deprecated and will be disabled in future versions. You should only decorate functions or methods. To preserve the current behavior of class decoration, you can directly decorate the `__init__` method and nothing else.
+  warnings.warn("Decorating classes is deprecated and will be disabled in "
+Training: 2024-03-14 16:05:31,150-rank_id: 0
+/home/pbqv20/anaconda3/envs/arcface/lib/python3.9/site-packages/torch/nn/parallel/distributed.py:2214: UserWarning: You passed find_unused_parameters=true to DistributedDataParallel, `_set_static_graph` will detect unused parameters automatically, so you do not need to set find_unused_parameters=true, just be sure these unused parameters will not change during training loop while calling `_set_static_graph`.
+  warnings.warn(
+Training: 2024-03-14 16:05:34,325-: margin_list              (1.0, 0.5, 0.0)
+Training: 2024-03-14 16:05:34,325-: network                  r50
+Training: 2024-03-14 16:05:34,325-: resume                   False
+Training: 2024-03-14 16:05:34,325-: save_all_states          False
+Training: 2024-03-14 16:05:34,325-: output                   work_dirs/ms1mv3_r50_onegpu
+Training: 2024-03-14 16:05:34,325-: embedding_size           512
+Training: 2024-03-14 16:05:34,325-: sample_rate              1.0
+Training: 2024-03-14 16:05:34,325-: interclass_filtering_threshold0
+Training: 2024-03-14 16:05:34,325-: fp16                     True
+Training: 2024-03-14 16:05:34,325-: batch_size               128
+Training: 2024-03-14 16:05:34,325-: optimizer                sgd
+Training: 2024-03-14 16:05:34,325-: lr                       0.02
+Training: 2024-03-14 16:05:34,325-: momentum                 0.9
+Training: 2024-03-14 16:05:34,325-: weight_decay             0.0005
+Training: 2024-03-14 16:05:34,325-: verbose                  2000
+Training: 2024-03-14 16:05:34,326-: frequent                 10
+Training: 2024-03-14 16:05:34,326-: dali                     False
+Training: 2024-03-14 16:05:34,326-: dali_aug                 False
+Training: 2024-03-14 16:05:34,326-: gradient_acc             1
+Training: 2024-03-14 16:05:34,326-: seed                     2048
+Training: 2024-03-14 16:05:34,326-: num_workers              2
+Training: 2024-03-14 16:05:34,326-: wandb_key                xxxxxxxxxxxxxxxxx
+Training: 2024-03-14 16:05:34,326-: suffix_run_name          xxxxxxxxxxx
+Training: 2024-03-14 16:05:34,326-: using_wandb              False
+Training: 2024-03-14 16:05:34,326-: wandb_entity             xxxxxxx
+Training: 2024-03-14 16:05:34,326-: wandb_project            xxxxxxx
+Training: 2024-03-14 16:05:34,326-: wandb_log_all            True
+Training: 2024-03-14 16:05:34,326-: save_artifacts           True
+Training: 2024-03-14 16:05:34,326-: wandb_resume             True
+Training: 2024-03-14 16:05:34,326-: notes                    xxxxxxxxx
+Training: 2024-03-14 16:05:34,326-: rec                      /home/pbqv20/datasets/idiff-uniform
+Training: 2024-03-14 16:05:34,326-: num_classes              10049
+Training: 2024-03-14 16:05:34,326-: num_image                502450
+Training: 2024-03-14 16:05:34,326-: num_epoch                20
+Training: 2024-03-14 16:05:34,326-: warmup_epoch             0
+Training: 2024-03-14 16:05:34,326-: val_targets              ['lfw', 'cfp_fp', 'agedb_30']
+Training: 2024-03-14 16:05:34,326-: total_batch_size         128
+Training: 2024-03-14 16:05:34,326-: warmup_step              0
+Training: 2024-03-14 16:05:34,326-: total_step               78500
+loading bin 0
+loading bin 1000
+loading bin 2000
+loading bin 3000
+loading bin 4000
+loading bin 5000
+loading bin 6000
+loading bin 7000
+loading bin 8000
+loading bin 9000
+loading bin 10000
+loading bin 11000
+torch.Size([12000, 3, 112, 112])
+loading bin 0
+loading bin 1000
+loading bin 2000
+loading bin 3000
+loading bin 4000
+loading bin 5000
+loading bin 6000
+loading bin 7000
+loading bin 8000
+loading bin 9000
+loading bin 10000
+loading bin 11000
+loading bin 12000
+loading bin 13000
+torch.Size([14000, 3, 112, 112])
+loading bin 0
+loading bin 1000
+loading bin 2000
+loading bin 3000
+loading bin 4000
+loading bin 5000
+loading bin 6000
+loading bin 7000
+loading bin 8000
+loading bin 9000
+loading bin 10000
+loading bin 11000
+torch.Size([12000, 3, 112, 112])

@@ -10,8 +10,8 @@ config = edict()
 config.margin_list = (1.0, 0.5, 0.0)
 config.network = "r50"
 config.resume = False
-config.save_all_states = False
-config.output = "idiff_arcface_r50"
+config.save_all_states = False 
+config.output = "ms1mv3_arcface_r50"
 
 config.embedding_size = 512
 
@@ -50,11 +50,12 @@ config.seed = 2048
 config.num_workers = 2
 
 # WandB Logger
-config.wandb_key = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
-config.suffix_run_name = None
+config.wandb_key = "xxxxxxxxxxxxxxxxx"
+config.suffix_run_name = "xxxxxxxxxxx"
 config.using_wandb = False
-config.wandb_entity = "entity"
-config.wandb_project = "project"
+config.wandb_entity = "xxxxxxx"
+config.wandb_project = "xxxxxxx"
 config.wandb_log_all = True
-config.save_artifacts = False
-config.wandb_resume = False # resume wandb run: Only if the you wand t resume the last run that it was interrupted
+config.save_artifacts = True
+config.wandb_resume = True # resume wandb run: Only if the you wand t resume the last run that it was interrupted
+config.notes = "xxxxxxxxx"
