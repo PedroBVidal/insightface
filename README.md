@@ -19,11 +19,11 @@ Both manual-downloading models from our github repo and auto-downloading models 
 
 ## SDFR training solution 
 
-To train the proposed model, first install the requiriments: pip3 install -r   train\_requirements.txt.
+To train the proposed model, first install the requiriments: pip3 install -r train\_requirements.txt.
 
-Afterwards, configure the path to the training dataset and the used number of identities and images at recognition/arcface\_torch/configs/idifface\_r50\_onegpu.py. The dataset is available under request [here](https://github.com/fdbtrs/IDiff-Face)
+Afterwards, configure the path to the training dataset and the used number of identities and images at `recognition/arcface\_torch/configs/idifface\_r50\_onegpu.py`. The dataset is available under request [here](https://github.com/fdbtrs/IDiff-Face)
 
-To trigger the training, also move to recognition/arcface\_torch and run python3 train\_v2.py idifface\_r50\_onegpu. The training will run with default configuration.
+To trigger the training, also move to `recognition/arcface\_torch` and run `python3 train\_v2.py idifface\_r50\_onegpu`. The training will run with default configuration.
 
 
 ## Top News
