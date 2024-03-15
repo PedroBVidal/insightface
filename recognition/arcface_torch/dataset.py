@@ -15,6 +15,8 @@ from torchvision.datasets import ImageFolder
 from utils.utils_distributed_sampler import DistributedSampler
 from utils.utils_distributed_sampler import get_dist_info, worker_init_fn
 
+from torchvision.transforms import v2
+
 
 def get_dataloader(
     root_dir,
@@ -45,6 +47,9 @@ def get_dataloader(
              transforms.RandomHorizontalFlip(),
              transforms.ToTensor(),
              transforms.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5]),
+             v2.RandomErasing(),
+             v2.RandAugment(),
+
              ])
         train_set = ImageFolder(root_dir, transform)
 
@@ -142,6 +147,8 @@ class MXFaceDataset(Dataset):
              transforms.RandomHorizontalFlip(),
              transforms.ToTensor(),
              transforms.Normalize(mean=[0.5, 0.5, 0.5], std=[0.5, 0.5, 0.5]),
+             v2.RandomErasing(),
+	     v2.RandAugment(),
              ])
         self.root_dir = root_dir
         self.local_rank = local_rank
