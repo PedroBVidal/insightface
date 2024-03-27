@@ -19,9 +19,9 @@ config.lr = 0.02
 config.verbose = 2000
 config.dali = False
 
-config.rec = "/home/pbqv20/datasets/idiff-uniform"
-config.num_classes = 10049
-config.num_image = 502450
+config.rec = "/home/pbqv20/datasets/data"
+config.num_classes = 60000
+config.num_image = 1300000
 config.num_epoch = 20
 config.warmup_epoch = 0
 config.val_targets = ['lfw', 'cfp_fp', "agedb_30"]
