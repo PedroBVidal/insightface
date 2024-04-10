@@ -19,13 +19,13 @@ Both manual-downloading models from our github repo and auto-downloading models 
 
 ## SDFR & FRCSyn training solution 
 
-To train the proposed model, first install the requiriments: pip3 install -r train\_requirements.txt.
+To train the proposed models, first install the requiriments: pip3 install -r train\_requirements.txt.
 
 Afterwards, configure the path to the training dataset and the used number of identities and images at `recognition/arcface_torch/configs/idifface_r50_onegpu.py`. The dataset is available under request [here](https://github.com/fdbtrs/IDiff-Face)
 
 To trigger the training, also move to `recognition/arcface_torch` and run `python3 train_v2.py idifface_r50_onegpu`. The training will run with default configuration.
 
-For the FRCSyn competition we used the DCface dataset, available at [here](https://github.com/mk-minchul/dcface). The dataset with 550k identities was reduced to ~<500K images. With the downloaded dataset, configure the path to the training dataset and the used number of identities and images at `recognition/arcface_torch/configs/dcface_r100_onegpu.py`. 
+For the FRCSyn competition we used the DCface dataset, available at [here](https://github.com/mk-minchul/dcface). The dataset with 550k identities was reduced to ~<500K images. With the downloaded dataset, configure the path to the dataset and the used number of identities and images at `recognition/arcface_torch/configs/dcface_r100_onegpu.py`. 
 
 To train the model, move to `recognition/arcface_torch` and run `python3 train_v2.py dcface_r100_onegpu`. The training will run with default configuration.
 
