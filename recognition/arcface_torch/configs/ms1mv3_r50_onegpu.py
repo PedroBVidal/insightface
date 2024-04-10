@@ -6,7 +6,7 @@ from easydict import EasyDict as edict
 
 config = edict()
 config.margin_list = (1.0, 0.5, 0.0)
-config.network = "r50"
+config.network = "r100"
 config.resume = False
 config.output = None
 config.embedding_size = 512
@@ -20,8 +20,8 @@ config.verbose = 2000
 config.dali = False
 
 config.rec = "/home/pbqv20/datasets/data"
-config.num_classes = 60000
-config.num_image = 1300000
+config.num_classes = 9090
+config.num_image = 499950
 config.num_epoch = 20
 config.warmup_epoch = 0
 config.val_targets = ['lfw', 'cfp_fp', "agedb_30"]
